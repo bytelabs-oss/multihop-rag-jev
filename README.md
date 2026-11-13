@@ -1,13 +1,13 @@
 # multihop-rag-jev
 
-Tests TypeSafe's Jev model as a relevance filter in retrieval-augmented question answering, on the [MultiHop-RAG](https://github.com/yixuantt/MultiHop-RAG) corpus or your own documents. The app is called Atlas.
+Tests whether a decision model can choose which retrieved passages an answer model reads, keeping answer quality while cutting cost. The decision model is TypeSafe's Jev, and the questions come from the [MultiHop-RAG](https://github.com/yixuantt/MultiHop-RAG) corpus or your own documents. The app is called Atlas.
 
 Documents are chunked and embedded locally. Each question runs in four modes that share one answer model (`openai/gpt-5-mini`):
 
 - **Hybrid baseline.** Qdrant vector search plus BM25, fused with RRF, returns up to 20 passages. All of them go to the answer model.
-- **Hybrid + Jev.** The same 20 passages. Jev judges each one for relevance, then checks whether it adds anything to the passages already kept. Only the kept passages go to the answer model.
+- **Hybrid + Jev.** The same 20 passages. Jev decides whether each one helps answer the question, then whether it adds anything to the passages already kept. Only the kept passages go to the answer model.
 - **Keyword search (rg).** The answer model searches the raw document text with regular expressions, ripgrep-style, and reads every match.
-- **Keyword search (rg) + Jev.** The same search, but Jev checks each new match before the answer model sees it.
+- **Keyword search (rg) + Jev.** The same search, but Jev decides on each new match before the answer model sees it.
 
 The trace shows the exact Jev questions, raw answers, selection steps, answer context, tokens and cost for every mode. A separate benchmark page runs the modes over all 609 articles and 2,556 questions.
 
