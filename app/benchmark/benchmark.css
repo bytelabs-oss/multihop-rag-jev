@@ -1,0 +1,69 @@
+.benchmark-page{max-width:1440px;margin:0 auto;padding:32px 28px 64px}
+.benchmark-header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:16px}
+.benchmark-header h1{font-size:28px;font-weight:600}
+.benchmark-header p,.benchmark-protocol{margin-top:10px;color:var(--muted);font-size:14px;line-height:1.6}
+.benchmark-page a{text-decoration:underline;text-underline-offset:3px}
+.benchmark-header>a{white-space:nowrap;font-size:13px;padding:10px 0}
+.benchmark-setup,.benchmark-progress,.benchmark-overall,.benchmark-questions{border-top:1px solid var(--line);margin-top:28px;padding-top:24px}
+.benchmark-page h2{font-size:20px;font-weight:600;margin-bottom:16px}
+.benchmark-setup-heading,.benchmark-questions>header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+.benchmark-page label{font-size:13px;color:var(--muted)}
+.benchmark-setup-heading label,.benchmark-settings label,.benchmark-scoring>label,.benchmark-questions>header label{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.benchmark-page input:not([type=checkbox]),.benchmark-page select{min-height:40px;padding:8px 10px;border:1px solid var(--line);border-radius:5px;background:var(--panel);color:var(--text);font:inherit}
+.benchmark-page select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.benchmark-page [data-slot=native-select-wrapper]{display:block}
+.benchmark-setup-heading [data-slot=native-select-wrapper]{min-width:min(420px,100%)}
+.benchmark-page fieldset{display:flex;flex-wrap:wrap;gap:16px 24px;border:0;padding:0;margin:0 0 20px}
+.benchmark-page legend{font-size:13px;color:var(--muted);margin-bottom:12px}
+.benchmark-page fieldset label{display:flex;align-items:center;gap:8px;color:var(--text)}
+.benchmark-settings{display:flex;gap:24px;flex-wrap:wrap;margin-bottom:16px}
+.benchmark-settings input{width:90px}
+.benchmark-help,.benchmark-scoring p,.benchmark-questions>header p{color:var(--muted);font-size:13px;line-height:1.7;max-width:85ch}
+.benchmark-confirm{display:flex;align-items:flex-start;gap:10px;max-width:95ch;margin:20px 0;line-height:1.6}
+.benchmark-confirm input{margin-top:4px;flex-shrink:0}
+.benchmark-actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.benchmark-page button:not(.benchmark-question-link){padding:10px 14px;border:1px solid var(--line);border-radius:5px;font-size:13px}
+.benchmark-page button:disabled{cursor:default}
+.benchmark-error,.benchmark-warning{padding:14px 16px;margin:16px 0;border:1px solid var(--line);background:var(--panel);font-size:13px;line-height:1.7}
+.benchmark-error{color:#efd0b9}
+.benchmark-warning{max-width:110ch;color:var(--muted)}
+.benchmark-progress progress{display:block;width:100%;height:12px;margin:16px 0;accent-color:var(--accent)}
+.benchmark-progress>p{font-size:13px;line-height:1.7;margin-top:10px}
+.benchmark-table{width:100%;overflow:auto;margin-top:20px}
+.benchmark-table table{width:100%;border-collapse:collapse;font-size:13px;text-align:left;font-variant-numeric:tabular-nums}
+.benchmark-table th,.benchmark-table td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.benchmark-table thead th{font-size:12px;color:var(--muted);font-weight:500;white-space:nowrap}
+.benchmark-table tbody th{font-weight:500}
+.benchmark-table td{white-space:nowrap}
+.benchmark-table small{display:block;margin-top:6px;color:var(--muted);font-size:11px}
+.benchmark-scoring{margin-top:24px}
+.benchmark-scoring summary{cursor:pointer;font-size:14px;color:var(--accent);padding:10px 0}
+.benchmark-scoring>label{display:block;margin:14px 0}
+.benchmark-scoring p{margin:14px 0}
+.benchmark-question-link{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;width:100%;min-width:280px;max-width:70ch;text-align:left;line-height:1.7;font-size:13px;padding:0;color:var(--accent)}
+.benchmark-question-link span{color:var(--muted);margin-right:6px}
+.benchmark-question-link:disabled{color:var(--muted);opacity:.7}
+.benchmark-pagination{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;font-size:13px}
+.benchmark-question-dialog{display:flex;flex-direction:column;width:min(1440px,96vw);height:94dvh;max-width:none;max-height:none;margin:auto;padding:0;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--text);overflow:hidden}
+.benchmark-question-dialog::backdrop{background:#000b}
+.benchmark-question-dialog>header{display:flex;justify-content:space-between;align-items:start;gap:24px;padding:20px 24px;flex-shrink:0;border-bottom:1px solid var(--line)}
+.benchmark-question-dialog h2{font-size:20px;margin:0 0 8px}
+.benchmark-question-dialog>header p{font-size:14px;line-height:1.6;max-width:100ch}
+.benchmark-question-dialog>header button{padding:10px 14px;border:1px solid var(--line);border-radius:5px}
+.benchmark-attempts{display:flex;gap:8px;padding:12px 24px;overflow:auto;flex-shrink:0;border-bottom:1px solid var(--line)}
+.benchmark-attempts button{flex-shrink:0;padding:10px 14px;border:1px solid var(--line);border-radius:5px;font-size:13px;text-align:left}
+.benchmark-attempts [aria-pressed=true]{border-color:var(--accent);color:var(--accent)}
+.benchmark-attempts small{display:block;margin-top:5px;color:var(--muted);font-size:11px}
+.benchmark-question-body{display:grid;grid-template-columns:minmax(240px,28%) minmax(0,1fr);min-height:0;flex:1}
+.benchmark-question-main{overflow:auto;min-height:0;border-left:1px solid var(--line)}
+.benchmark-answer{padding:24px}
+.benchmark-answer h3{font-size:17px;margin-bottom:14px}
+.benchmark-answer .answer-text{font-size:14px}
+.benchmark-reference{border-top:1px solid var(--line);margin-top:24px;padding-top:14px}
+.benchmark-reference summary{cursor:pointer;font-size:13px;color:var(--muted)}
+.benchmark-reference h4{font-size:13px;font-weight:600;margin:18px 0 8px}
+.benchmark-reference p,.benchmark-reference li{font-size:13px;line-height:1.7;white-space:pre-wrap}
+.benchmark-reference li{margin-bottom:12px}
+.benchmark-empty{padding:24px;font-size:14px;color:var(--muted)}
+.benchmark-question-main .run-details{overflow:visible}
+@media(max-width:800px){.benchmark-page{padding:24px 16px}.benchmark-setup-heading label{width:100%}.benchmark-setup-heading select{max-width:100%;margin:8px 0}.benchmark-question-body{grid-template-columns:minmax(190px,35%) minmax(0,1fr)}.benchmark-attempts{padding:12px}.benchmark-question-dialog>header{padding:16px}.benchmark-answer{padding:16px}}

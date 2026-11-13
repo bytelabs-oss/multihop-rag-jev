@@ -1,0 +1,16 @@
+{
+  "name": "MultiHop-RAG",
+  "authors": [
+    "Yixuan Tang",
+    "Yi Yang"
+  ],
+  "source": "https://huggingface.co/datasets/yixuantt/MultiHopRAG",
+  "revision": "71ac0d0",
+  "license": "ODC-BY-1.0",
+  "licenseUrl": "https://opendatacommons.org/licenses/by/1-0/",
+  "articles": 609,
+  "sha256": "20b61b5ab84de84a927420c5d265b7ec8d859ae49980699958a787ade9e4d28f",
+  "questionFile": "MultiHopRAG.json",
+  "questions": 2556,
+  "questionsSha256": "03cfb4926461f868684903aadc8024447bdda5bb3f6804741424cce338515bff"
+}

@@ -1,0 +1,6 @@
+docling==2.129.0
+qdrant-client[fastembed]==1.19.1
+fastembed==0.8.0
+scikit-learn==1.9.1
+semchunk==3.2.5
+llama-index-core==0.14.24
